@@ -1,0 +1,67 @@
+body, #slider, .wrap, .slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh; /* the height of any screen in divided up into 100 vh slices. vw is the width equivalent. */
+  overflow-x: hidden;
+}
+
+.wrap {
+  position: relative;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide1 {
+  background-image: url("images/city.jpeg");
+}
+
+.slide2 {
+  background-image: url("images/pier.jpeg");
+}
+
+.slide3 {
+  background-image: url("images/view.jpeg");
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-content span {
+  font-size: 5rem; /* rem is a scaling unit e.g. 5x original size. The default size is 16 pixels. */
+  color: #fff;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width: 30px 40px 30px 0; /* T R B L */
+  border-color: transparent #fff transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+#arrow-right {
+  border-width: 30px 0 30px 40px; /* T R B L */
+  border-color: transparent transparent transparent #fff;
+  right: 0;
+  margin-right: 30px;
+}
